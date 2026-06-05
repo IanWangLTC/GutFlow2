@@ -69,7 +69,7 @@ export default function EditPanel({ type, date, record, onClose }: Props) {
               <textarea
                 value={(type === 'breakfast' ? form.breakfastFoods : type === 'lunch' ? form.lunchFoods : type === 'dinner' ? form.dinnerFoods : form.snackFoods) || ''}
                 onChange={e => {
-                  const key = type === 'breakfast' ? 'breakfastFoods' : type === 'lunch' ? 'lunchFoods' : type === 'dinner' ? 'dinnerFoods' : 'snackFoods';
+                  const key = type === 'breakfast' ? 'breakfastFoods' : type === 'lunch' ? form.lunchFoods : type === 'dinner' ? 'dinnerFoods' : 'snackFoods';
                   setForm({ ...form, [key]: e.target.value });
                 }}
                 placeholder="米饭 鸡胸肉 西兰花（空格/逗号/换行均可分隔）"
@@ -262,4 +262,13 @@ export default function EditPanel({ type, date, record, onClose }: Props) {
             </div>
             <div className="mb-3">
               <label className="text-sm text-[#8E8E93] block mb-1">备注</label>
-              <textarea value={form.notes || ''} onChange={e => setForm({ ...form, notes: e.target.value })} rows={3} className="w-
+              <textarea value={form.notes || ''} onChange={e => setForm({ ...form, notes: e.target.value })} rows={3} className="w-full"></textarea>
+            </div>
+            <button onClick={() => save(form)} className="w-full py-3 rounded-xl bg-[#00D4AA] text-black font-semibold">保存</button>
+          </>
+        )}
+
+      </div>
+    </div>
+  );
+}
