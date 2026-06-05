@@ -1,0 +1,21 @@
+{
+  "name": "GutFlow",
+  "short_name": "GutFlow",
+  "description": "Health tracking companion for IBS + GERD + ADHD",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#0A0A0A",
+  "icons": [
+    {
+      "src": "./badge-placeholder.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./badge-placeholder.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
